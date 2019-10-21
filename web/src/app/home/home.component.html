@@ -1,0 +1,11 @@
+<agm-map [latitude] = "latitude" [longitude] = "longitude">
+</agm-map>
+
+<mat-nav-list>
+  <mat-list-item *ngFor="let link of installationList">
+    <a matLine >{{ link.address.street }}</a>
+    <button mat-icon-button (click)="getData(link.id)">
+      <mat-icon>info</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-nav-list>
